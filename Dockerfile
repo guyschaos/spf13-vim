@@ -1,5 +1,5 @@
 FROM ubuntu:14.04.1
-
+# docker build --no-cache -t guyschaos/docker-spf13-vim .
 RUN apt-get update -qq && apt-get install -y \
 git \
 vim-nox \
@@ -18,6 +18,8 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en  
 ENV LC_ALL en_US.UTF-8  
 
+RUN git clone --depth=1  https://github.com/Valloric/YouCompleteMe.git /root/YouCompleteMe
+RUN cd /root/YouCompleteMe; git submodule update --init --recursive; ./install.sh
 
 ENV GOLANG_VERSION 1.4.1
 
