@@ -170,7 +170,12 @@ setup_vundle() {
         "+BundleInstall!" \
         "+BundleClean" \
         "+qall"
-    
+    vim \
+        -u "$app_dir/.vimrc.bundles.default" \
+        "+set nomore" \
+        "+GoInstallBinaries!" \
+        "+qall"
+
     export SHELL="$system_shell"
 
     success "$1"
