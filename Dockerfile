@@ -11,6 +11,7 @@ cscope \
 wget \
 ca-certificates curl gcc libc6-dev make \
 bzr git mercurial \
+cmake python-dev build-essential \
 --no-install-recommends
 
 RUN locale-gen en_US.UTF-8  
