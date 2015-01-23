@@ -38,5 +38,5 @@ WORKDIR /root
 RUN git clone https://github.com/guyschaos/spf13-vim.git
 WORKDIR /root/spf13-vim
 
-RUN sh bootstrap
+RUN sh bootstrap.sh
 
